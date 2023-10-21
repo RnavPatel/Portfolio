@@ -49,10 +49,79 @@ table {
 
 /* my code starts here */
 
+/* Andrew Tutorial */
+
+/* PARENT ELEMENTS MUST USE DISPLAY: FLEX!!!! */
+
+/* USE FOR DEBUGGING */
+body *{ 
+  /* background: rgba(255, 0, 0, 0.2);    */
+}
+
+
+img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.home-img {
+  display: block;
+  width: 49.81668%;
+  height: auto;
+
+}
+
+.home-img:hover{
+  opacity: 50%;
+  transition: ease-in-out .3s; 
+}
+
+.flex { /*selector*/
+  /* rules, Property: Value */
+  display: flex;    
+  flex-wrap: wrap;  
+  justify-content: space-between; /*but space between each element*/
+  align-items: flex-start;
+  margin: 0 2%; /*0 on top and bottom 2 on left and right*/
+}
+
+.col1{   /*col1 WITHIN section -- . means CLASS OF */
+  width: 16.7%;
+}
+
+.col2{  
+  width: 33.4%;
+}
+
+.col3{  
+  width: 49.8%;
+}
+
+.col4{  
+  width: 66.3%;
+}
+
+.col5{  
+  width: 82.8%;
+}
+
+.col6{  
+  width: 100%; /*cuz it can be*/
+}
+
+.big-buffer{
+   margin-top: 2em;
+}
+
+.small-buffer{
+  margin-top: 0.25em;
+}
+
 main {
     padding-top: 3rem;
-    padding-left: 6rem;
-    padding-right: 6rem;
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
     padding-bottom: 3rem;
 }
 
@@ -62,15 +131,13 @@ main {
   }
   
 
-  div.bigbr {
-    height: 2rem;
-  }
+
 
   div.smallbr {
     height: 1rem;
   }
 
-/* Navigación */
+/* type */
 h1 {
     font-family: "DM Sans", sans-serif;
     font-weight: 400;
@@ -80,6 +147,54 @@ h1 {
     line-height: 120%;
   }
 
+h2 {
+  font-family: "DM Sans", sans-serif;
+  font-weight: 300;
+  font-style: light;
+  font-size: 30px;
+  color: #000000;
+  line-height: 120%;
+}
+
+a:link {
+  color:#000000;
+  text-decoration: none;
+}
+
+a:hover{
+  background-color: #FFC164;
+  transition: ease-out .3s; 
+}
+
+a.gensler:hover{
+  color:#FFFFFF;
+  background-color: #EE3227;
+  transition: ease-out .3s; 
+}
+
+
+a:visited {
+  color:#000000;
+}
+
+h3 {  
+  font-family: "DM Sans", sans-serif;
+  font-weight: 300;
+  font-style: regular;
+  font-size: 15px;
+  color: #000000;
+  line-height: 120%;
+}
+
+em {
+  font-family: "DM Sans", sans-serif;
+  font-weight: 600;
+  font-style: semibold;
+  font-size: 30px;
+  color: #000000;
+  line-height: 120%;
+}
+/* Navigación */
 .topnav {
     display: flex;
     background: #ffffff;
@@ -114,71 +229,49 @@ h1 {
   }
   
   /* have the buttons STAY COLORED when on that page */
-  .topnav-middle :focus{
+  /* colored */
+  .topnav-left-colored {
+    background-color: #14D277;
+  }
+
+  .topnav-right-colored {
+    background-color: #FFC164;
+  }
+
+  .topnav-middle-colored{
     background-color: #FC67FF;
   }
 
-  .topnav-left :focus{
-    background-color: #14D277;
-  }
+  /* Images? */
+  .bodyimg {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    width: 49.5%;
+    height: inherit 20%;
+}
 
-  .topnav-right :focus{
-    background-color: #FFC164;
-  }
-
-
- /* .topnav {
-    display: inline-block;
-    justify-content: space-between;
-    padding-top: 0.5rem;
-    padding-left: 0.5rem;
-	padding-bottom: 0.5rem;
-    background: #ffffff;
-    position: fixed; 
-    width: 100%; 
-    border-bottom: 1px solid #000000;
-  } 
-
-  h1 {
+  /* why the fuck not */
+.loading {
+    margin: 20px;
     font-family: "DM Sans", sans-serif;
-    font-weight: 400;
-    font-style: regular;
-    font-size: 20px;
+    font-weight: 600;
+    font-style: semibold;
+    font-size: 30px;
     color: #000000;
     line-height: 120%;
-  }
-
-/* a.topnav {
-    background-color: #ffffff;
-    border-bottom: 1px solid #000000;
 }
 
-a.topnav :hover {
-    width: 33.333%; 
-    background-color: #14D277;
-} 
-
-  .topnav-right a{
-    display: inline-block;
-    padding-top: 0.5rem;
-    padding-left: 0.5rem;
-	padding-bottom: 0.5rem;
-  }
-
-  .topnav-right {
-    display: inline-block;
-	position: fixed;
-	right: 0.5rem;
-  }
-  
-  a.topnav-right {
-    display: inline-block;
-    background-color: #ffffff;
+.loading:after {
+  display: inline-block;
+  animation: dotty steps(1,end) 1s infinite;
+  content: '';
 }
 
-  a.topnav-right :hover {
-    width: 33.333%; 
-    background-color: #FFC164;
-  }
-
- */
+@keyframes dotty {
+  0%   { content: ''; }
+  25%  { content: '.'; }
+  50%  { content: '..'; }
+  75%  { content: '...'; }
+  100% { content: ''; }
+}
