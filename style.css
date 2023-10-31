@@ -54,8 +54,9 @@ table {
 /* PARENT ELEMENTS MUST USE DISPLAY: FLEX!!!! */
 
 /* USE FOR DEBUGGING */
+/*OVER HERE*/
 body *{ 
-  /* background: rgba(255, 0, 0, 0.2);    */
+    /* background: rgba(255, 0, 0, 0.2);         */
 }
 
 
@@ -72,6 +73,13 @@ img {
 
 }
 
+.spread-img {
+  display: block;
+  width: 100%;
+  height: auto;
+
+}
+
 .home-img:hover{
   opacity: 50%;
   transition: ease-in-out .3s; 
@@ -84,26 +92,27 @@ img {
   justify-content: space-between; /*but space between each element*/
   align-items: flex-start;
   margin: 0 2%; /*0 on top and bottom 2 on left and right*/
+
 }
 
 .col1{   /*col1 WITHIN section -- . means CLASS OF */
-  width: 16.7%;
+  width: 16%; /*16.7*/
 }
 
 .col2{  
-  width: 33.4%;
+  width: 33%; /*33.4*/
 }
 
 .col3{  
-  width: 49.8%;
+  width: 49%; /*49.8*/
 }
 
 .col4{  
-  width: 66.3%;
+  width: 66%; /*66.3*/
 }
 
 .col5{  
-  width: 82.8%;
+  width: 82%; /*82.8*/
 }
 
 .col6{  
@@ -111,11 +120,15 @@ img {
 }
 
 .big-buffer{
-   margin-top: 2em;
+   margin-top: 2rem;
+}
+
+.massive-buffer{
+  margin-top: 15rem;
 }
 
 .small-buffer{
-  margin-top: 0.25em;
+  margin-top: 0.25rem;
 }
 
 main {
@@ -138,20 +151,51 @@ main {
   }
 
 /* type */
+
 h1 {
     font-family: "DM Sans", sans-serif;
     font-weight: 400;
     font-style: regular;
-    font-size: 20px;
+    font-size: 20pt;
     color: #000000;
     line-height: 120%;
   }
 
-h2 {
+  /* subtitle heading */
+h2 { 
   font-family: "DM Sans", sans-serif;
-  font-weight: 300;
+  font-weight: 200;
   font-style: light;
-  font-size: 30px;
+  font-size: 30pt;
+  color: #000000;
+  line-height: 120%;
+}
+/* body paragraph */
+h3 {  
+  font-family: "DM Sans", sans-serif;
+  font-weight: 200;
+  font-style: regular;
+  font-size: 10pt;
+  color: #000000;
+  line-height: 120%;
+}
+
+/* Big title */
+h4 {
+  font-family: "DM Sans", sans-serif;
+  font-weight: 600;
+  font-style: semibold;
+  font-size: 45pt;
+  color: #000000;
+  line-height: 120%;
+}
+
+/* nav bar */
+h5 {  
+  font-family: "DM Sans", sans-serif;
+  font-weight: 400;
+  font-style: regular;
+  font-size: 15pt;
   color: #000000;
   line-height: 120%;
 }
@@ -177,14 +221,6 @@ a:visited {
   color:#000000;
 }
 
-h3 {  
-  font-family: "DM Sans", sans-serif;
-  font-weight: 300;
-  font-style: regular;
-  font-size: 15px;
-  color: #000000;
-  line-height: 120%;
-}
 
 em {
   font-family: "DM Sans", sans-serif;
@@ -196,6 +232,7 @@ em {
 }
 /* Navigación */
 .topnav {
+    position: fixed;
     display: flex;
     background: #ffffff;
     width: 100%; 
@@ -274,4 +311,10 @@ em {
   50%  { content: '..'; }
   75%  { content: '...'; }
   100% { content: ''; }
+}
+
+@media only screen and (max-width: 600px) {
+.flex{
+  display: block;
+}
 }
