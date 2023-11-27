@@ -56,7 +56,7 @@ table {
 /* USE FOR DEBUGGING */
 /*OVER HERE*/
 body *{ 
-    /* background: rgba(255, 0, 0, 0.2);         */
+   /* background: rgba(255, 0, 0, 0.2);        */
 }
 
 
@@ -170,16 +170,26 @@ h2 {
   color: #000000;
   line-height: 120%;
 }
+
+bold {
+  font-weight: bold;
+}
+
 /* body paragraph */
 h3 {  
   font-family: "DM Sans", sans-serif;
   font-weight: 200;
   font-style: regular;
-  font-size: 10pt;
+  font-size: 12pt;
   color: #000000;
   line-height: 120%;
 }
 
+/* Andrew test */
+.bodycopy {
+  max-width: 35em;
+  /* line-height: 1.2em; */
+}
 /* Big title */
 h4 {
   font-family: "DM Sans", sans-serif;
@@ -313,8 +323,20 @@ em {
   100% { content: ''; }
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 800px) {
 .flex{
   display: block;
+}
+/* Serialize Selector: use commas to separate BUT NOT AFTER LAST ONE!*/
+.col1 {
+  width: 50%;
+} 
+
+.col2, .col3, .col4, .col5, .col6 {
+  width: 100%;
+}
+
+.home-img {
+  width: 100%;
 }
 }
