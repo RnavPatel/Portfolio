@@ -96,7 +96,7 @@ img {
   height: auto;
 }
 
-.img-hero-container {
+.img-crop-container {
   display: flex;
   flex-wrap: nowrap;
   justify-content: space-between;
