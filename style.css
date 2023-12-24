@@ -56,7 +56,7 @@ table {
 /* USE FOR DEBUGGING */
 /*OVER HERE*/
 body *{ 
-  /* background: rgba(255, 0, 0, 0.2);  */
+  /* background: rgba(255, 0, 0, 0.2);    */
 }
 
 
@@ -130,6 +130,11 @@ img {
 
 .col3{  
   width: 49%; /*49.8*/
+}
+
+.flex-container {
+  display: flex;
+  align-items: center; /* Optional: Align items vertically centered */
 }
 
 .col4{  
