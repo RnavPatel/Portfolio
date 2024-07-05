@@ -49,6 +49,7 @@ table {
 }
 
 
+
 /* my code starts here */
 
 
@@ -61,7 +62,7 @@ table {
 /* USE FOR DEBUGGING */
 /*OVER HERE*/
 body {
- /* background: rgba(255, 0, 0, 0.2);      */
+  background: rgba(0, 0, 0);       
 }
 
 
@@ -82,19 +83,28 @@ img {
 
 }
 
+.home-img-expo a{
+  cursor: url(Images/Expo/ExpoIcon.png), auto;
+}
+
+.home-img-wander a{
+  cursor: url(Images/SpatialComp/Wander-Icon.png), auto;
+}
+
+.home-img-garden a{
+  cursor: url(Images/LilGarden/Garden_Icon.png), auto;
+}
+
+.home-img-color a{
+  cursor: url(Images/ColorOut/Color_Icon.png), auto;
+}
+
 
 .spread-img {
  display: block;
  width: 100%;
  height: auto;
 
-
-}
-
-
-.home-img:hover{
- opacity: 50%;
- transition: ease-in-out .3s;
 }
 
 
@@ -164,9 +174,20 @@ img {
 }
 
 
-.flex-container {
+.flex-container { /*Text for the gallery*/
  display: flex;
  align-items: center; /* Optional: Align items vertically centered */
+ max-height: 0;
+ overflow: hidden;
+ transition: max-height 0.75s ease-in-out, opacity 0.5s ease-in-out;
+ opacity: 0;
+}
+
+
+
+.home-img:hover .flex-container {
+  max-height: 1080px; /* Set this to the maximum height of the content */
+  opacity: 1;
 }
 
 
@@ -204,6 +225,9 @@ img {
  margin-top: 0.4rem;
 }
 
+.index-buffer{
+  margin-top: 0.2rem;
+ }
 
 main {
    padding-top: 3rem;
@@ -232,26 +256,37 @@ main {
 /* type */
 
 
+
 h1 {
    font-family: "DM Sans", sans-serif;
    font-weight: 400;
    font-style: regular;
    font-size: 20pt;
-   color: #000000;
-   line-height: 120%;
+   color: #ffffff;
+   line-height: 100%;
  }
-
 
  /* subtitle heading */
 h2 {
- font-family: "DM Sans", sans-serif;
- font-weight: 200;
- font-style: light;
- font-size: 30pt;
- color: #000000;
- line-height: 120%;
+ font-family: "Familjen Grotesk", sans-serif;
+ font-weight: 400;
+ font-style: medium;
+ font-size: 35pt;
+ color: #ffffff;
+ line-height: 100%;
 }
 
+.green-text {
+  color: #14D277;
+}
+
+.orange-text {
+  color: #FFC164;
+}
+
+.gray-subheading {
+  color: #7F7F7F;
+}
 
 bold {
  font-weight: bold;
@@ -260,11 +295,11 @@ bold {
 
 /* body paragraph */
 h3 { 
- font-family: "DM Sans", sans-serif;
+ font-family: "Familjen Grotesk", sans-serif;
  font-weight: 200;
  font-style: regular;
  font-size: 15pt;
- color: #000000;
+ color: #ffffff;
  line-height: 120%;
 }
 
@@ -280,7 +315,7 @@ h4 {
  font-weight: 600;
  font-style: semibold;
  font-size: 45pt;
- color: #000000;
+ color: #ffffff;
  line-height: 120%;
 }
 
@@ -291,7 +326,7 @@ h5 {
  font-weight: 400;
  font-style: regular;
  font-size: 15pt;
- color: #000000;
+ color: #ffffff;
  line-height: 120%;
 }
 
@@ -301,20 +336,21 @@ h6 {
  font-weight: 200;
  font-style: regular;
  font-size: 9pt;
- color: #000000;
+ color: #ffffff;
  line-height: 120%;
 }
 
 
 a:link {
- color:#000000;
+ color:#ffffff;
  text-decoration: none;
 }
 
 
 a:hover{
- background-color: #FFC164;
- transition: ease-out .3s;
+  color:#000000;
+  background-color: #FFC164;
+  transition: ease-out .3s;
 }
 
 
@@ -328,7 +364,7 @@ a.gensler:hover{
 
 
 a:visited {
- color:#000000;
+ color:#ffffff;
 }
 
 
@@ -346,9 +382,9 @@ em {
 .topnav {
    position: fixed;
    display: flex;
-   background: #ffffff;
+   background: #000000;
    width: 100%;
-   border-bottom: 1px solid #000000;
+   border-bottom: 1px solid #ffffff;
  }
 
 
@@ -433,6 +469,8 @@ em {
    color: #000000;
    line-height: 120%;
 }
+
+
 
 
 .loading:after {
