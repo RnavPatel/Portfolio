@@ -67,7 +67,6 @@ body {
 
 
 
-
 img {
  display: block;
  width: 100%;
@@ -196,8 +195,6 @@ img {
  opacity: 0;
  
 }
-
-
 
 .home-img:hover .flex-container {
   max-height: 1080px; /* Set this to the maximum height of the content */
@@ -383,24 +380,21 @@ a:link {
  color:#ffffff;
  text-decoration: none;
 }
+a:hover{
+  color:#14D277;
+  transition: ease-out .3s;
+}
 
 a.contact:link {
   color:#7f7f7f;
   text-decoration: underline;
 }
 
-a:hover{
-  color:#000000;
-  background-color: #FFC164;
+a.contact:hover{
+  color:#14D277;
   transition: ease-out .3s;
 }
 
-
-
-
-a:visited {
- color:#ffffff;
-}
 
 
 
