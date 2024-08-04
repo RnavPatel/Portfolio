@@ -244,7 +244,7 @@ main {
    padding-top: 3rem;
    padding-left: 2.5rem;
    padding-right: 2.5rem;
-   padding-bottom: 3rem;
+   padding-bottom: 1rem;
 }
 
 
@@ -377,20 +377,10 @@ h6 {
 
 
 a:link {
- color:#ffffff;
+ color:#7f7f7f;
  text-decoration: none;
 }
 a:hover{
-  color:#14D277;
-  transition: ease-out .3s;
-}
-
-a.contact:link {
-  color:#7f7f7f;
-  text-decoration: underline;
-}
-
-a.contact:hover{
   color:#14D277;
   transition: ease-out .3s;
 }
