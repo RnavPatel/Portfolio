@@ -186,21 +186,32 @@ img {
 }
 
 
-.flex-container { /*Text for the gallery*/
- display: flex;
- align-items: center; /* Optional: Align items vertically centered */
- max-height: 0;
- overflow: hidden;
- transition: max-height 0.75s ease-in-out, opacity 0.5s ease-in-out;
- opacity: 0;
- 
+.flex-container {
+  display: flex;
+  align-items: flex-start;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-in-out, opacity 0.15s ease-in-out; /* Faster opacity transition for when leaving */
+  opacity: 0;
 }
 
 .home-img:hover .flex-container {
-  max-height: 1080px; /* Set this to the maximum height of the content */
+  max-height: 1080px; /* Adjust to the maximum height of the content */
   opacity: 1;
+  transition: max-height 0.75s ease-in-out, opacity 0.3s ease-in-out; 
 }
 
+.home-img:hover .gray-dropdown {
+  transform: rotate(90deg); /* Rotate the subheading on image hover */
+  color:#14D277;
+  transition: transform 0.3s ease-in-out; /* Smooth transition */
+}
+
+.gray-dropdown {
+  color:#7F7F7F;
+  display: inline-block; /* To apply the transform */
+  transition: transform 0.3s ease-in-out; /* Prepares for smooth hover transition */
+}
 
 .col4{ 
  width: 66%; /*66.3*/
@@ -226,6 +237,9 @@ img {
  margin-top: 4rem;
 }
 
+.project-buffer{
+  margin-top: 6rem;
+ }
 
 .massive-buffer{
  margin-top: 15rem;
@@ -236,8 +250,12 @@ img {
  margin-top: 0.4rem;
 }
 
+.index-text-buffer{
+  margin-top: 0.6rem;
+ }
+
 .index-buffer{
-  margin-top: 0.1rem;
+  margin-top: 0.25rem;
  }
 
 main {
@@ -255,18 +273,12 @@ main {
  }
 
 
-
-
-
-
  div.smallbr {
    height: 1rem;
  }
 
 
 /* type */
-
-
 
 h1 {
    font-family: "DM Sans", sans-serif;
@@ -282,12 +294,11 @@ h2 {
  font-family: "Familjen Grotesk", sans-serif;
  font-weight: 400;
  font-style: medium;
- font-size: 35pt;
+ font-size: 30pt;
  color: #ffffff;
  line-height: 100%;
 }
 
-/* style.css */
 
 .interactive-text {
   display: flex;
@@ -316,8 +327,10 @@ span.space {
 }
 
 .gray-subheading {
-  color: #7F7F7F;
+  color:#7F7F7F;
 }
+
+
 
 bold {
  font-weight: bold;
@@ -365,14 +378,13 @@ h5 {
  line-height: 120%;
 }
 
-
 h6 { 
- font-family: "DM Sans", sans-serif;
- font-weight: 200;
- font-style: regular;
- font-size: 9pt;
- color: #ffffff;
- line-height: 120%;
+  font-family: "Familjen Grotesk", sans-serif;
+  font-weight: 400;
+  font-style: regular;
+  font-size: 12.5pt;
+  color: #ffffff;
+  line-height: 120%;
 }
 
 
