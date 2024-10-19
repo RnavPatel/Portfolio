@@ -191,7 +191,7 @@ img {
   align-items: flex-start;
   max-height: 0;
   overflow: hidden;
-  transition: max-height 0.3s ease-in-out, opacity 0.15s ease-in-out; /* Faster opacity transition for when leaving */
+  transition: max-height 0.75s ease-in-out, opacity 0.5s ease-in-out; /* Faster opacity transition for when leaving */
   opacity: 0;
 }
 
