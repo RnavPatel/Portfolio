@@ -291,7 +291,7 @@ h1 {
 
  /* subtitle heading */
 h2 {
- font-family: "Familjen Grotesk", sans-serif;
+ font-family: "DM Sans", sans-serif;
  font-weight: 400;
  font-style: medium;
  font-size: 30pt;
@@ -339,8 +339,8 @@ bold {
 
 /* body paragraph */
 h3 { 
- font-family: "Familjen Grotesk", sans-serif;
- font-weight: 200;
+ font-family: "DM Sans", sans-serif;
+ font-weight: 300;
  font-style: regular;
  font-size: 15pt;
  color: #ffffff;
@@ -355,7 +355,7 @@ h3 {
 }
 /* Big title */
 h4 {
- font-family: "DM Sans", sans-serif;
+ font-family: "Familjen Grotesk", sans-serif;
  font-weight: 600;
  font-style: semibold;
  font-size: 45pt;
@@ -379,8 +379,8 @@ h5 {
 }
 
 h6 { 
-  font-family: "Familjen Grotesk", sans-serif;
-  font-weight: 400;
+  font-family: "DM Sans", sans-serif;
+  font-weight: 250;
   font-style: regular;
   font-size: 12.5pt;
   color: #ffffff;
