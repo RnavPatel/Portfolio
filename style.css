@@ -288,13 +288,13 @@ main {
 /* type */
 
 h1 {
-   font-family: "DM Sans", sans-serif;
-   font-weight: 250;
-   font-style: regular;
-   font-size: 20pt;
-   color: #ffffff;
-   line-height: 100%;
- }
+  font-family: "DM Sans", sans-serif;
+  font-weight: 250;
+  font-style: regular;
+  font-size: 20pt;
+  color: #ffffff;
+  line-height: 1.2; /* Equivalent to 120% of the font size */
+}
 
  /* subtitle heading */
 h2 {
