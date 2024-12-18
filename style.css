@@ -65,6 +65,13 @@ body {
   background: rgba(0, 0, 0);       
 }
 
+hr {
+  border: none; 
+  height: 1px; 
+  background-color: white; 
+  width: 100%;
+}
+
 
 
 img {
@@ -282,7 +289,7 @@ main {
 
 h1 {
    font-family: "DM Sans", sans-serif;
-   font-weight: 400;
+   font-weight: 250;
    font-style: regular;
    font-size: 20pt;
    color: #ffffff;
@@ -292,7 +299,7 @@ h1 {
  /* subtitle heading */
 h2 {
  font-family: "DM Sans", sans-serif;
- font-weight: 400;
+ font-weight: 200;
  font-style: medium;
  font-size: 30pt;
  color: #ffffff;
@@ -355,7 +362,7 @@ h3 {
 }
 /* Big title */
 h4 {
- font-family: "Familjen Grotesk", sans-serif;
+ font-family: "DM Sans", sans-serif;
  font-weight: 600;
  font-style: semibold;
  font-size: 45pt;
@@ -509,7 +516,7 @@ em {
  /* why the fuck not */
 .loading {
    margin: 20px;
-   font-family: "Familjen Grotesk", sans-serif;
+   font-family: "DM Sans", sans-serif;
    font-weight: 600;
    font-style: semibold;
    font-size: 30px;
