@@ -85,11 +85,61 @@ img {
 }
 
 .home-img {
- display: block;
- width: 33%;
- height: auto;
-
+  display: block;
+  width: 49.75%; /* Adjust as needed */
+  position: relative;
+  overflow: hidden; /* Ensures media scaling stays within bounds */
+  
 }
+
+.media-wrapper {
+  position: relative;
+  width: 100%;
+  height: auto;
+  
+  overflow: hidden; /* Clip zoomed content */
+}
+
+.media-wrapper video,
+.media-wrapper img {
+  display: block;
+  width: 100%;
+  height: auto; /* Fill the wrapper */
+  object-fit: cover; /* Ensure proper scaling and cropping */
+  transition: transform 0.3s ease-in-out; /* Smooth zoom animation */
+}
+
+.media-wrapper:hover video,
+.media-wrapper:hover img {
+  transform: scale(1.1); /* Apply zoom effect on hover */
+}
+
+
+/* .home-img {
+  display: block;
+  width: 49.75%;
+  height: auto;
+  position: relative;
+  overflow: hidden; 
+}
+
+.home-img video,
+.home-img img {
+  width: 99%;
+  height: auto; 
+  transition: border 0.3s ease-in-out; 
+  object-fit: cover;
+  z-index: 1;
+}
+
+.home-img:hover video,
+.home-img:hover img {
+  /*transform: scale(1.05); 
+  border: 2px solid #14D277; 
+
+} */
+
+
 
 .home-img-expo a{
   cursor: url(Images/Expo/ExpoIcon.png), auto;
@@ -307,30 +357,16 @@ h2 {
 }
 
 
-.interactive-text {
-  display: flex;
-  flex-wrap: wrap;
-  font-size: 20pt;
-  color: #7F7F7F; /* Initial color */
-}
-
-.interactive-text span {
-  display: inline-block;
-  transition: color 0.1s;
-  color: #7F7F7F; /* Initial color for individual spans */
-}
-
-span.space {
-  display: inline-block;
-}
-
-
 .green-text {
   color: #14D277;
 }
 
 .orange-text {
   color: #FFC164;
+}
+
+.purple-text {
+  color: #9f0fff;
 }
 
 .gray-subheading {
@@ -396,13 +432,21 @@ h6 {
 
 
 a:link {
- color:#7f7f7f;
- text-decoration: none;
+  color: #7f7f7f; /* Gray for unvisited links */
+  text-decoration: none;
 }
-a:hover{
-  color:#14D277;
-  transition: ease-out .3s;
+
+a:visited {
+  color: #7f7f7f; /* Same gray for visited links */
+  text-decoration: none;
 }
+
+a:hover {
+  color: #14D277; /* Green hover effect */
+  text-decoration: none; /* Ensure no underline appears */
+  transition: color 0.3s ease-out; /* Smooth transition */
+}
+
 
 
 
@@ -417,75 +461,69 @@ em {
  line-height: 120%;
 }
 /* Navigación */
+/* General Navbar Styling */
 .topnav {
-   position: fixed;
-   display: flex;
-   background: #000000;
-   width: 100%;
-   border-bottom: 1px solid #ffffff;
-   z-index: 1000; /* Ensure it stays above other content */
- }
-
-
- .topnav div{
-   align-content: right;
-   width: 30.5%;
-   padding: 0.5rem;
- }
-
- .topnav-filler{
-  flex: 1 1 3.75%;
- }
-
- .topnav-icon{
-  flex: 1 1 3.75%;
- }
- .topnav-icon:hover{
-  background-color: #14D277;
-  transition: ease-out .3s;
+  position: fixed; /* Fix navbar to the top */
+  top: 0;
+  left: 0;
+  width: 100%; /* Full-width navbar */
+  padding: 1rem 3rem; /* Keep original padding */
+  z-index: 1000; /* Ensure navbar stays on top */
+  background-color: transparent; /* Keep black background */
+  border-bottom: 2px solid transparent; /* Remove unwanted border */
+  box-sizing: border-box; /* Include padding in width calculation */
+  display: flex; /* Keep horizontal layout */
+  justify-content: space-between; /* Distribute links across navbar */
+  align-items: center; /* Vertically center the items */
 }
 
- .topnav-middle {
-  flex: 1 1 31%; /* Flex grow and flex basis */
+/* Navbar Links */
+.topnav a {
+  display: inline-block; /* Keep links in a single horizontal line */
+  text-decoration: none; /* Remove underline */
+  color: #ffffff; /* Default text color */
+  background-color: transparent; /* No background initially */
+  margin-right: 1.5rem; /* Space between links */
+  padding: 0.5rem 1rem; /* Padding for button-like appearance */
+  border-radius: 25px; /* Rounded corners */
+  border: 2px solid transparent; /* Default no visible border */
+  transition: color 0.3s ease, border-color 0.3s ease; /* Smooth hover transitions */
 }
 
- .topnav a{
-   text-decoration: none;
- }
+/* Hover and Active States */
+.topnav-work a:hover,
+.topnav-work a.active {
+  color: #ffffff; /* Keep text white */
+  border-color: #14D277; /* Green border for Work section */
+}
+
+.topnav-about a:hover,
+.topnav-about a.active {
+  color: #ffffff; /* Keep text white */
+  border-color: #FFC164; /* Yellow-orange border for About section */
+}
+
+.topnav-play a:hover,
+.topnav-play a.active {
+  color: #ffffff; /* Keep text white */
+  border-color: #9f0fff; /* Purple border for Play section */
+}
+
+/* Responsive Adjustments for Mobile */
+@media only screen and (max-width: 800px) {
+  .topnav {
+    justify-content: flex-start; /* Align items to the left */
+    padding-left: 1.5rem; /* Add left padding for better spacing */
+  }
+
+  .topnav a {
+    margin-right: 1rem; /* Reduce spacing between links */
+    padding: 0.5rem 0.8rem; /* Adjust padding for smaller screens */
+    font-size: 0.9rem; /* Slightly smaller font for mobile */
+  }
+}
 
 
-.topnav-middle:hover{
-   background-color: #FC67FF;
-   transition: ease-out .3s;
- }
-
-
- /* hover colors */
-.topnav-left:hover{
-   background-color: #14D277;
-   transition: ease-in-out .3s;
- }
-
-
-.topnav-right:hover{
-   background-color: #FFC164;
-   transition: ease-in-out .3s;
- }
-  /* have the buttons STAY COLORED when on that page */
- /* colored */
- .topnav-left-colored {
-   background-color: #14D277;
- }
-
-
- .topnav-right-colored {
-   background-color: #FFC164;
- }
-
-
- .topnav-middle-colored{
-   background-color: #FC67FF;
- }
 
 
  /* Images? */
