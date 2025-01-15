@@ -258,14 +258,14 @@ img {
   transition: max-height 0.75s ease-in-out, opacity 0.3s ease-in-out; 
 }
 
-.home-img:hover .gray-dropdown {
+.home-img:hover .white-dropdown {
   transform: rotate(90deg); /* Rotate the subheading on image hover */
   color:#14D277;
   transition: transform 0.3s ease-in-out; /* Smooth transition */
 }
 
-.gray-dropdown {
-  color:#7F7F7F;
+.white-dropdown {
+  color:#FFFFFF;
   display: inline-block; /* To apply the transform */
   transition: transform 0.3s ease-in-out; /* Prepares for smooth hover transition */
 }
@@ -313,6 +313,9 @@ img {
 
 .index-buffer{
   margin-top: 0.25rem;
+  display: flex; /* Keep horizontal layout */
+  justify-content: space-between; /* Distribute links across navbar */
+  align-items: center; /* Vertically center the items */
  }
 
 main {
