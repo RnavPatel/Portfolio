@@ -504,7 +504,6 @@ em {
   padding: 1rem 3rem; /* Keep original padding */
   z-index: 1000; /* Ensure navbar stays on top */
   background-color: transparent ; /* Keep black background */
-  border-bottom: 2px solid transparent; /* Remove unwanted border */
   box-sizing: border-box; /* Include padding in width calculation */
   display: flex; /* Keep horizontal layout */
   justify-content: space-between; /* Distribute links across navbar */
