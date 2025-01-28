@@ -222,7 +222,7 @@ img {
  flex-wrap: wrap; 
  justify-content: space-between; /*but space between each element*/
  align-items: flex-start;
- margin: 0 2%; /*0 on top and bottom 2 on left and right*/
+ margin: 0 0.5%; /*0 on top and bottom 2 on left and right*/
 
 
 }
@@ -353,7 +353,7 @@ h1 {
  /* subtitle heading */
 h2 {
  font-family: "DM Sans", sans-serif;
- font-weight: 200;
+ font-weight: 250;
  font-style: medium;
  font-size: 25pt;
  color: #ffffff;
@@ -448,27 +448,10 @@ h6.simple-button {
 
 
 /* Link Base Style */
-a:link, a:visited {
-  color: transparent; /* Make the text color transparent */
-  background-image: linear-gradient(90deg, white, gray, white); /* Gradient with repeating colors */
-  background-clip: text; /* Clip the gradient to the text */
-  -webkit-background-clip: text; /* Safari support */
-  text-decoration: none; /* Remove underline */
-  background-size: 200%; /* Make the gradient larger than the text width */
-  animation: pulseText 2s infinite linear; /* Animate the gradient */
+a:link {
+  color: #7f7f7f; /* Same gray for visited links */
+  text-decoration: none;
 }
-
-/* Keyframes for Gradient Animation */
-@keyframes pulseText {
-  0% {
-    background-position: 200% 0; /* Start far to the right */
-  }
-  100% {
-    background-position: -200% 0; /* End far to the left */
-  }
-}
-
-
 
 a:visited {
   color: #7f7f7f; /* Same gray for visited links */
@@ -646,9 +629,25 @@ em {
   width: 100%;
   margin-top: 0.25rem;
   display: flex;
-  justify-content: center; /* Center-align horizontally */
-  align-items: center; /* Center-align vertically */
-  text-align: center; /* Ensures inline content is centered */
+  justify-content: left; /* Center-align horizontally */
+  align-items: left; /* Center-align vertically */
+  text-align: left; /* Ensures inline content is centered */
 }
 }
+
+.simple-buttons-container {
+  display: inline-flex; /* Treats the buttons as inline elements inside a flexbox */
+  gap: 0.5rem; /* Adds space between buttons */
+}
+
+.simple-button {
+  font-size: 10pt;
+  display: inline-block;
+  padding: 0.25rem 0.5rem;
+  border-radius: 25px;
+  background-color: #3f3f3f;
+  text-decoration: none;
+}
+
+
 /*hello*/
