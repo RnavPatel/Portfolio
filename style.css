@@ -67,9 +67,10 @@ body {
 
 hr {
   border: none; 
-  height: 1px; 
+  height: 1.5px; 
   background-color: white; 
   width: 100%;
+  border-radius: 50px;
 }
 
 
@@ -78,6 +79,11 @@ img {
  display: block;
  width: 100%;
  height: auto;
+ border-radius: 10pt;
+}
+
+video {
+  border-radius: 10pt;
 }
 
 .invert{
@@ -86,18 +92,26 @@ img {
 
 .home-img {
   display: block;
-  width: 49.75%; /* Adjust as needed */
+  width: 49.5%; /* Adjust as needed */
   position: relative;
   overflow: hidden; /* Ensures media scaling stays within bounds */
-  
+  border-radius: 10pt;
+}
+
+.home-img img, 
+.home-img video {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: inherit; /* Inherits the parent's border-radius */
 }
 
 .media-wrapper {
   position: relative;
   width: 100%;
   height: auto;
-  
   overflow: hidden; /* Clip zoomed content */
+  border-radius: 10pt;
 }
 
 .media-wrapper video,
@@ -107,6 +121,7 @@ img {
   height: auto; /* Fill the wrapper */
   object-fit: cover; /* Ensure proper scaling and cropping */
   transition: transform 0.3s ease-in-out; /* Smooth zoom animation */
+  border-radius: inherit;
 }
 
 .media-wrapper:hover video,
@@ -181,12 +196,14 @@ img {
  display: flex;
  flex-wrap: nowrap;
  justify-content: space-between;
+ border-radius: 10pt;
 }
 
 
 .img-container img {
  width: 50%; /* Adjust this as needed */
  height: auto;
+ border-radius: inherit;
 }
 
 
@@ -194,6 +211,7 @@ img {
  display: flex;
  flex-wrap: nowrap;
  justify-content: space-between;
+ border-radius: inherit;
 }
 
 
@@ -203,6 +221,7 @@ img {
  object-fit: cover; /* Maintain the aspect ratio while covering the container */
  object-position: 50% 25%;
  overflow: hidden;
+ border-radius: inherit;
 }
 
 
@@ -600,6 +619,7 @@ em {
 .youtube-video {
  aspect-ratio: 16 / 9;
  width: 100%;
+ border-radius: 10pt;
 }
 
 
