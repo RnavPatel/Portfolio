@@ -127,6 +127,7 @@ video {
 .media-wrapper:hover video,
 .media-wrapper:hover img {
   transform: scale(1.05); /* Apply zoom effect on hover */
+
 }
 
 
@@ -153,8 +154,6 @@ video {
   border: 2px solid #14D277; 
 
 } */
-
-
 
 .home-img-expo a{
   cursor: url(Images/Expo/ExpoIcon.png), auto;
@@ -372,7 +371,7 @@ h1 {
  /* subtitle heading */
 h2 {
  font-family: "DM Sans", sans-serif;
- font-weight: 250;
+ font-weight: 400;
  font-style: medium;
  font-size: 25pt;
  color: #ffffff;
