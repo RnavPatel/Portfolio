@@ -502,7 +502,7 @@ em {
   top: 0;
   left: 0;
   width: 100%; /* Full-width navbar */
-  padding: 1rem 3rem; /* Keep original padding */
+  margin: 0.5% 0.5%; /*0 on top and bottom 2 on left and right*/
   z-index: 1000; /* Ensure navbar stays on top */
   background-color: transparent ; /* Keep black background */
   box-sizing: border-box; /* Include padding in width calculation */
