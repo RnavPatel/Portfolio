@@ -240,7 +240,7 @@ video {
  flex-wrap: wrap; 
  justify-content: space-between; /*but space between each element*/
  align-items: flex-start;
- margin: 0 0.5%; /*0 on top and bottom 2 on left and right*/
+ margin: 0% 0.5%; /*0 on top and bottom 2 on left and right*/
 
 
 }
